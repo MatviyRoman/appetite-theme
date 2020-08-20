@@ -1,0 +1,402 @@
+/*
+ * Theme Name: ТЦ Appetite
+ * Description: Тема для ТЦ "Appetite"
+ * Author: programist.top
+*/
+
+@import "resass/r";
+
+* {
+    color: #3c3c3b;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 27px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.slider {
+    /* min-height: 899px; */
+    /* position: relative; */
+    width: 100%;
+    background: #000;
+}
+
+.slider .title {
+    max-width: 362px;
+    font-size: 16px;
+    position: absolute;
+    right: 15%;
+    /* top: 6%; */
+    line-height: 20px;
+    padding-top: 60px;
+    /* padding-top: 121px; */
+    color: #000;
+    z-index: 1;
+
+    @include s(0, 767px) {
+        left: 15px;
+        top: 46px;
+        font-weight: bold;
+        background: #fff9;
+        padding: 5px;
+    }
+}
+
+.slider .title::before {
+    content: '';
+    width: 115px;
+    bottom: -28px;
+    position: absolute;
+    height: 7px;
+    background: #3c3c3b url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAIBAMAAAA4iN3XAAAAAXNSR0IB2cksfwAAAB5QTFRFAAAAPDw8Ozs7Pj44PDw7PDw7PDw8Ozs7PT06PDw8jFJVZgAAAAp0Uk5TAFlfKe//b0pPIurN4dYAAAAdSURBVHicYxBSIhMYMLiGkgkSRrUSp7Wig0wwAQAzopnpVeQEFAAAAABJRU5ErkJggg==);
+
+    @include s(0, 767px) {
+        display: none;
+    }
+}
+
+.slider-wrapper,
+.slider-wrapper img {
+    width: 100%;
+}
+
+.slider .slick-dots {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+    top: -40px;
+
+    @include s(0, 767px) {
+        justify-content: center;
+    }
+}
+
+.slider .slick-dots button {
+    /* display: none; */
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    left: -23px;
+    top: 3px;
+    cursor: pointer;
+}
+
+.slider .slick-dots li {
+    position: relative;
+}
+
+.slider .slick-dots li::marker {
+    display: none !important
+}
+
+.slider .slick-dots .slick-active button {
+    background: #000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+}
+
+.slider .slick-dots button:focus {
+    outline: none;
+}
+
+
+.slider .slick-dots li+li {
+    margin-left: 59px;
+
+    @include s(0, 767px) {
+        margin-left: 25px;
+    }
+}
+
+.blockInvestmens {
+    background: #000;
+    color: #fff;
+    padding-top: 52px;
+    padding-bottom: 72px;
+
+    @include s(0, 767px) {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+.blockInvestmens .title {
+    margin-bottom: 19px;
+    color: #fff;
+}
+
+.blockInvestmens .subtitle {
+    margin-bottom: 47px;
+    color: #fff;
+}
+
+.blockInvestmens .img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include s(0, 767px) {
+        justify-content: space-evenly;
+
+        a {
+            width: 50%;
+            display: block;
+            text-align: center;
+
+            &:last-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.blockInvestmens .img-wrapper img+img {
+    margin-left: 10px;
+
+    @include s(0, 767px) {
+        margin-top: 25px;
+    }
+}
+
+.blockPlan {
+    background: #3c3c3b;
+    color: #fff !important;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    /* height: 100vh; */
+    height: 844px;
+
+    @include s(0, 767px) {
+        height: 678px;
+    }
+}
+
+.blockPlan .container {
+    height: 100%;
+    max-height: 722px;
+    background: #3c3c3b url(../img/Appetite_P0.png) center no-repeat;
+    background-size: contain;
+    min-height: 722px;
+    min-height: 100%;
+
+    @include s(0, 767px) {
+        background: #3c3c3b url(../img/Appetite_P0.png) center bottom no-repeat;
+        background-size: contain;
+    }
+}
+
+.blockPlan .title {
+    color: #fff;
+    margin-bottom: 25px;
+    padding-top: 25px;
+}
+
+.blockPlan .subtitle {
+    max-width: 243px;
+    margin-bottom: 29px;
+    line-height: 20px;
+}
+
+.blockPlan p {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.blockPlan p:last-child {
+    margin-top: 20px;
+}
+
+.blockPlan .subtitle,
+.blockPlan p,
+.blockPlan sup,
+.blockPlan span {
+    color: #fff;
+}
+
+.blockPlan sup {
+    font-size: 10px;
+    margin-left: -5px;
+}
+
+.blockPlan span {
+    font-size: 16px;
+}
+
+.blockCounter {
+    min-height: 251px;
+    height: 100%;
+    background: #b1b1b1;
+    color: #000;
+    padding-bottom: 50px;
+
+    @include s(0, 767px) {
+        padding-bottom: 3px;
+    }
+}
+
+.blockCounter .title {
+    padding-top: 47px;
+    padding-bottom: 37px;
+}
+
+.blockCounter .items-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blockCounter .item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 53px;
+    height: 100%;
+    min-height: 92px;
+
+    @include s(0, 841px) {
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 50%;
+    }
+}
+
+.blockCounter .item img {
+    position: relative;
+    top: -15px;
+    padding-right: 15px;
+}
+
+.blockCounter .item .number {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.blockCounter .item .text {
+    height: 81px;
+}
+
+
+.footer {
+    min-height: 634px;
+    color: #3c3c3b;
+    position: relative;
+}
+
+.footer .container {
+    display: flex;
+}
+
+.footer .title {
+    margin-top: 48px;
+    margin-bottom: 34px;
+}
+
+.footer .container .contact {
+
+    /* 228px */
+    /* max-width: 368px; */
+    max-width: 229px;
+    /* padding-right: 140px; */
+    width: 100%;
+
+    @include s(0, 767px) {
+        max-width: 100%;
+    }
+}
+
+.footer p.margin-bottom {
+    margin-bottom: 22px;
+}
+
+.footer {
+
+    .mail,
+    .fb {
+        text-decoration: underline;
+    }
+
+    .fb {
+        position: relative;
+        left: -45px;
+
+        @include s(0, 1009px) {
+            left: 0;
+        }
+
+        img {
+            position: relative;
+            top: 50%;
+            margin-right: 10px;
+            transform: translateY(10px);
+
+            @include s(0, 1009px) {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        &:last-child {
+            padding-top: 250px;
+
+            @include s(0, 767px) {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+
+.footer .map {
+    min-height: 634px;
+    height: 100%;
+    /* max-width: 915px; */
+    max-width: 55%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    /* filter: grayscale(1) brightness(0.7) invert(1); */
+    filter: grayscale(1) brightness(1) invert(1);
+
+    @include s(0, 767px) {
+        top: 350px;
+        max-width: 100%;
+    }
+}
+
+.place-card.place-card-large {
+    display: none !important;
+}

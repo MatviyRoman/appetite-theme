@@ -1,0 +1,35 @@
+{% block html_head_container %}
+
+	{% include 'html-header.twig' %}
+	{% block head %}{% endblock %}
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>{% endblock %}<body class="{{body_class}}" data-template="base.twig">
+<header class="header"> {% block header %}{% endblock %}
+	</header>
+
+	<section id="content" role="main" class="content-wrapper">
+		{% if title %}
+			<h1>{{title}}</h1>
+		{% endif %}
+		<div class="wrapper {{sidebar_class}}">
+			{% block content %}
+				<div class="container">
+					Sorry, no content
+				</div>
+			{% endblock %}
+		</div>
+	</section>
+
+	{% block footer %}
+		<footer id="footer" class="footer">
+			{% include 'footer.twig' %}
+		</footer>
+		{{ function('wp_footer') }}
+	{% endblock %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+	<script src="/wp-content/themes/appetite/theme/index.js"></script>
+</body></html>
